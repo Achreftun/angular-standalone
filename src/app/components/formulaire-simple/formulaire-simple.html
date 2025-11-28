@@ -4,9 +4,7 @@
     <input 
     type="text" 
     id="nom" 
-    #entry
-    [value]="nom"
-    (input)="updateNom(entry.value)"
+    [(ngModel)]="nom"
     >
     {{ nom }}
 </div>
