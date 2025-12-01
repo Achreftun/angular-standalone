@@ -13,6 +13,7 @@ import { FormulaireSimpleComponent } from './components/formulaire-simple/formul
 import { CalculetteComponent } from './components/calculette/calculette';
 import { FormulaireReactifComponent } from './components/formulaire-reactif/formulaire-reactif';
 import { FormulaireBuilderComponent } from './components/formulaire-builder/formulaire-builder';
+import { CommentComponent } from './components/comment/comment';
 
 // ici on définit les routes de nos composants
 export const routes: Routes = [
@@ -30,6 +31,7 @@ export const routes: Routes = [
     { path: 'formulaire', component: FormulaireSimpleComponent },
     { path: 'reactive', component: FormulaireReactifComponent },
     { path: 'builder', component: FormulaireBuilderComponent },
+    { path: 'comment', component: CommentComponent },
     // à placer en dernier
     // { path: '**', component: NotFoundComponent },
     { path: 'not-found', component: NotFoundComponent },
