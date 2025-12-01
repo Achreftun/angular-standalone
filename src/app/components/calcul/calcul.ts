@@ -34,7 +34,7 @@ export class CalculComponent implements OnInit {
         } else if (!this.operators.has(this.op)) {
           this.erreur = "Opérateur invalide"
         } else {
-          this.resultat = eval(`${this.value1} ${this.operateur} ${this.value2}`)
+          this.resultat = calculer(this.value1, this.value2, this.operateur)
         }
       })
 
@@ -58,4 +58,12 @@ export class CalculComponent implements OnInit {
   // }
 
 
+}
+function calculer(val1: number, val2: number, op: string = '+'): number {
+  switch (op) {
+    case '+': return val1 + val2;
+    case '-': return val1 - val2;
+    case '/': return val1 / val2;
+    default: return val1 * val2;
+  }
 }
