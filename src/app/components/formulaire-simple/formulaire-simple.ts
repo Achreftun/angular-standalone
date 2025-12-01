@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './formulaire-simple.css',
 })
 export class FormulaireSimpleComponent {
-  personne: Personne = {}
+  personne: Personne = { nom: '', prenom: '', age: 0 }
   personnes: Personne[] = []
   afficher(form: NgForm) {
     this.personnes.push({ ...this.personne })
