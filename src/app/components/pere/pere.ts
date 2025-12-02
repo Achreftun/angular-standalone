@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, viewChild, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, QueryList, viewChild, ViewChild, ViewChildren } from '@angular/core';
 import { FilsComponent } from '../fils/fils';
 
 @Component({
@@ -10,22 +10,19 @@ import { FilsComponent } from '../fils/fils';
 export class PereComponent implements OnInit, AfterViewInit {
 
 
-  @ViewChild(FilsComponent) fils!: FilsComponent
-  // Angular 19
-  // fils = viewChild(FilsComponent)
+  @ViewChildren(FilsComponent) fils!: QueryList<FilsComponent>
   nom = 'John Wick'
   maVille = 'Marseille'
-
-  ngOnInit(): void {
-    console.log(this.fils);
-  }
   ngAfterViewInit(): void {
     console.log(this.fils);
   }
-
-  premierEnfant() {
+  ngOnInit(): void {
     console.log(this.fils);
-    console.log(this.fils.ville());
+  }
+
+
+  tousLesEnfants() {
+    this.fils.forEach(f => console.log(f.ville()))
 
   }
 }
