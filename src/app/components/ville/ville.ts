@@ -9,9 +9,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class VilleComponent {
   @Input() ville = ''
-  @Output() onUpdateVille = new EventEmitter<string>()
+  @Output() villeChange = new EventEmitter<string>()
   sendVille() {
-    this.onUpdateVille.emit(this.ville)
+    this.villeChange.emit(this.ville)
   }
 
 }

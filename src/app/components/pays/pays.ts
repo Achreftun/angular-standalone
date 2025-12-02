@@ -9,10 +9,4 @@ import { VilleComponent } from '../ville/ville';
 })
 export class PaysComponent {
   villes = ['Marseille', 'Lyon', 'Paris']
-  updateVille(ville: string, i: number) {
-    this.villes[i] = ville
-    // const newValues = [...this.villes]
-    // newValues[i] = ville
-    // this.villes = newValues
-  }
 }
