@@ -21,6 +21,7 @@ import { PrimeurComponent } from './components/primeur/primeur';
 import { ParentComponent } from './components/parent/parent';
 import { ClavierComponent } from './components/clavier/clavier';
 import { PaysComponent } from './components/pays/pays';
+import { ContainerComponent } from './components/container/container';
 
 // ici on définit les routes de nos composants
 export const routes: Routes = [
@@ -46,6 +47,7 @@ export const routes: Routes = [
     { path: 'parent', component: ParentComponent },
     { path: 'clavier', component: ClavierComponent },
     { path: 'pays', component: PaysComponent },
+    { path: 'container', component: ContainerComponent },
     // à placer en dernier
     // { path: '**', component: NotFoundComponent },
     { path: 'not-found', component: NotFoundComponent },
