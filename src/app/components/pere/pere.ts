@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, QueryList, viewChild, ViewChild, ViewChildren } from '@angular/core';
+import { Component, viewChildren } from '@angular/core';
 import { FilsComponent } from '../fils/fils';
 
 @Component({
@@ -7,22 +7,13 @@ import { FilsComponent } from '../fils/fils';
   templateUrl: './pere.html',
   styleUrl: './pere.css',
 })
-export class PereComponent implements OnInit, AfterViewInit {
+export class PereComponent  {
 
-
-  @ViewChildren(FilsComponent) fils!: QueryList<FilsComponent>
+  fils = viewChildren(FilsComponent)
   nom = 'John Wick'
   maVille = 'Marseille'
-  ngAfterViewInit(): void {
-    console.log(this.fils);
-  }
-  ngOnInit(): void {
-    console.log(this.fils);
-  }
-
 
   tousLesEnfants() {
-    this.fils.forEach(f => console.log(f.ville()))
-
+    this.fils().forEach(f => console.log(f.ville()))
   }
 }
