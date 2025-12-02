@@ -26,7 +26,10 @@ export class PersonneService {
   save(p: Personne): Observable<Personne> {
     return this.http.post<Personne>(this.url, p)
   }
-  remove(ind: number) {
-    this.personnes.splice(ind, 1)
+  remove(id: number) {
+    // `http://localhost:8080/ws/personnes/1`
+    // `http://localhost:8080/ws/personnes/2`
+    // this.personnes.splice(ind, 1)
+    return this.http.delete<void>(`${this.url}/${id}`)
   }
 }

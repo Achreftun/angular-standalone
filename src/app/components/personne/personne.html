@@ -38,7 +38,7 @@
     @for (p of personnes(); track $index) {
     <li>
         {{ p.nom }} {{ p.prenom }}
-        <button (click)="supprimer(p.id, $index)" class="btn">
+        <button (click)="supprimer(p.id)" class="btn">
             <i class="fa-solid fa-trash-can text-danger"></i>
         </button>
 
