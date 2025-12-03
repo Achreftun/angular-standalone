@@ -25,8 +25,8 @@ export class PersonneComponent implements OnInit {
     })
   }
 
-  ajouter(perso: Personne) {
-    this.ps.save(perso).subscribe(p => {
+  ajouter() {
+    this.ps.save(this.personne).subscribe(p => {
       this.personnes.set([...this.personnes(), p])
     })
     this.personne = { nom: '', prenom: '', age: 0 }
