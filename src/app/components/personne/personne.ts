@@ -3,10 +3,11 @@ import { PersonneService } from '../../services/personne';
 import { Personne } from '../../models/personne';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from "@angular/router";
+import { PersonneFormComponent } from '../personne-form/personne-form';
 
 @Component({
   selector: 'app-personne',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, PersonneFormComponent],
   templateUrl: './personne.html',
   styleUrl: './personne.css',
 })
@@ -24,8 +25,8 @@ export class PersonneComponent implements OnInit {
     })
   }
 
-  ajouter() {
-    this.ps.save(this.personne).subscribe(p => {
+  ajouter(perso: Personne) {
+    this.ps.save(perso).subscribe(p => {
       this.personnes.set([...this.personnes(), p])
     })
     this.personne = { nom: '', prenom: '', age: 0 }
