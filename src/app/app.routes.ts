@@ -23,6 +23,7 @@ import { ClavierComponent } from './components/clavier/clavier';
 import { PaysComponent } from './components/pays/pays';
 import { ContainerComponent } from './components/container/container';
 import { TchatComponent } from './components/tchat/tchat';
+import { PersonneDetailsComponent } from './components/personne-details/personne-details';
 
 // ici on définit les routes de nos composants
 export const routes: Routes = [
@@ -43,6 +44,7 @@ export const routes: Routes = [
     { path: 'signal-form', component: FormulaireSignalComponent },
     { path: 'comment', component: CommentComponent },
     { path: 'personne', component: PersonneComponent },
+    { path: 'personne/:id', component: PersonneDetailsComponent },
     { path: 'pere', component: PereComponent },
     { path: 'primeur', component: PrimeurComponent },
     { path: 'parent', component: ParentComponent },

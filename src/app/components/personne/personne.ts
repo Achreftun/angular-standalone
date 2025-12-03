@@ -2,10 +2,11 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { PersonneService } from '../../services/personne';
 import { Personne } from '../../models/personne';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-personne',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './personne.html',
   styleUrl: './personne.css',
 })
