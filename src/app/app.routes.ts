@@ -28,6 +28,7 @@ import { PaysComponent } from './components/interaction-module/pays/pays';
 import { ContainerComponent } from './components/interaction-module/container/container';
 import { TchatComponent } from './components/interaction-module/tchat/tchat';
 import { AuthComponent } from './components/auth/auth';
+import { authGuard } from './guards/auth-guard';
 
 // ici on définit les routes de nos composants
 export const routes: Routes = [
@@ -47,8 +48,8 @@ export const routes: Routes = [
     { path: 'builder', component: FormulaireBuilderComponent },
     { path: 'signal-form', component: FormulaireSignalComponent },
     { path: 'comment', component: CommentComponent },
-    { path: 'personne', component: PersonneComponent },
-    { path: 'personne/:id', component: PersonneDetailsComponent },
+    { path: 'personne', component: PersonneComponent, canActivate: [authGuard] },
+    { path: 'personne/:id', component: PersonneDetailsComponent, canActivate: [authGuard] },
     { path: 'pere', component: PereComponent },
     { path: 'primeur', component: PrimeurComponent },
     { path: 'parent', component: ParentComponent },
