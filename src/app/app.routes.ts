@@ -27,6 +27,7 @@ import { ClavierComponent } from './components/interaction-module/clavier/clavie
 import { PaysComponent } from './components/interaction-module/pays/pays';
 import { ContainerComponent } from './components/interaction-module/container/container';
 import { TchatComponent } from './components/interaction-module/tchat/tchat';
+import { AuthComponent } from './components/auth/auth';
 
 // ici on définit les routes de nos composants
 export const routes: Routes = [
@@ -55,6 +56,7 @@ export const routes: Routes = [
     { path: 'pays', component: PaysComponent },
     { path: 'container', component: ContainerComponent },
     { path: 'tchat', component: TchatComponent },
+    { path: 'auth', component: AuthComponent },
     // à placer en dernier
     // { path: '**', component: NotFoundComponent },
     { path: 'not-found', component: NotFoundComponent },
