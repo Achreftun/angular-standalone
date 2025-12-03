@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { Produit } from '../../model/produit';
+import { Produit } from '../../../model/produit';
 import { FormsModule } from '@angular/forms';
 
 @Component({
