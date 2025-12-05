@@ -29,7 +29,7 @@ import { ContainerComponent } from './components/interaction-module/container/co
 import { TchatComponent } from './components/interaction-module/tchat/tchat';
 import { AuthComponent } from './components/auth/auth';
 import { authGuard } from './guards/auth-guard';
-import { CompteurComponent } from './components/interaction-module/compteur/compteur';
+import { PanierComponent } from './components/interaction-module/panier/panier';
 
 // ici on définit les routes de nos composants
 export const routes: Routes = [
@@ -59,6 +59,7 @@ export const routes: Routes = [
     { path: 'container', component: ContainerComponent },
     { path: 'tchat', component: TchatComponent },
     { path: 'auth', component: AuthComponent },
+    { path: 'panier', component: PanierComponent },
     // à placer en dernier
     // { path: '**', component: NotFoundComponent },
     { path: 'not-found', component: NotFoundComponent },

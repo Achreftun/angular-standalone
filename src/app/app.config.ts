@@ -6,6 +6,7 @@ import { provideHttpClient, withInterceptors, withInterceptorsFromDi } from '@an
 import { authInterceptor } from './interceptors/auth-interceptor';
 import { provideState, provideStore } from '@ngrx/store';
 import { counterReducer } from './stores/counter/counter.reducer';
+import { cartReducer } from './stores/cart/cart.reducer';
 
 // la configuration globale d'une application Angular
 
@@ -16,6 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(withInterceptorsFromDi(), withInterceptors([authInterceptor])),
     provideStore(),
-    provideState({ name: 'counter', reducer: counterReducer })
+    provideState({ name: 'counter', reducer: counterReducer }),
+    provideState({ name: 'cart', reducer: cartReducer }),
   ]
 };

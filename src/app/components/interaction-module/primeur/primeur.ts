@@ -1,5 +1,5 @@
 import { Component, viewChildren } from '@angular/core';
-import { Produit } from '../../../model/produit';
+import { Produit } from '../../../models/produit';
 import { ProduitComponent } from "../produit/produit";
 import { FormsModule } from '@angular/forms';
 
@@ -27,6 +27,6 @@ export class PrimeurComponent {
     
     const qteCommandee = this.produitsComponents().at(index)?.qteCommandee as number
     this.total += qteCommandee * this.produits[index].prix
-    this.produits[index].quantite -= qteCommandee
+    // this.produits[index].quantite -= qteCommandee
   }
 }
